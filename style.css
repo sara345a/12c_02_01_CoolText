@@ -1,0 +1,45 @@
+header {
+  display: flex;
+  justify-content: flex-start;
+}
+
+body {
+  background-color: rgb(191, 253, 191);
+}
+
+h2 {
+  font-family: sans-serif;
+  font-size: 8vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  color: rgb(185, 109, 255);
+}
+
+span {
+  display: inline-block;
+}
+
+.letterfadein-bottom {
+  --letter: 0s;
+  animation-name: letterfadein-bottom;
+  animation-duration: 1s;
+  animation-timing-function: cubic-bezier(0.44, 1.09, 0.71, 1.41);
+  animation-delay: calc(var(--letter) * 0.03s);
+  animation-fill-mode: both;
+}
+
+@keyframes letterfadein-bottom {
+  0% {
+    transform: translate(0, 80px);
+    opacity: 0;
+  }
+  80% {
+    transform: translate(0, -5px);
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
